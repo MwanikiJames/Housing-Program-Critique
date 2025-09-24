@@ -48,9 +48,11 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-gradient text-white py-20">
-        <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
+    <!-- Hero Section with Housing Image -->
+    <section class="relative text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700 opacity-90"></div>
+        <img src="http://static.photos/housing/1200x630/42" alt="Housing Development" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
             <h1 class="text-4xl md:text-5xl font-bold mb-6">Housing Program Critique Report</h1>
             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Policy and economic evaluation of Kenya's national housing program</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -60,12 +62,17 @@
         </div>
     </section>
 
-    <!-- Overview Section -->
+    <!-- Overview Section with Housing Images -->
     <section id="overview" class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="text-3xl font-bold mb-4">📈 Overview</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto">This project provides a policy and economic evaluation of Kenya's national housing program, critiquing affordability, financing models, and long-term sustainability.</p>
+            </div>
+            
+            <!-- Housing Development Image -->
+            <div class="mb-12 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up">
+                <img src="http://static.photos/housing/1024x576/23" alt="Kenya Housing Development" class="w-full h-64 object-cover">
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
