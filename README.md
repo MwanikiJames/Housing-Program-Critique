@@ -3,11 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Housing Program Critique Report</title>
+    <!-- Load Tailwind CSS from CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Load AOS CSS and JS from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Load Feather Icons from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <style>
         .hero-gradient {
             background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
@@ -259,8 +263,7 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Housing Program Critique</h3>
-                    <p class="text-gray-300">A comprehensive evaluation of Kenya's national housing initiative with policy recommendations.</p>
+                    <div class="h-16"></div> <!-- Spacer for layout -->
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
@@ -286,44 +289,54 @@
     </footer>
 
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        feather.replace();
-        
-        // Mobile menu toggle functionality
+        // Initialize AOS animation library
         document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Replace feather icons
+            if(typeof feather !== 'undefined') {
+                feather.replace();
+            }
+            
+            // Mobile menu toggle functionality
             const mobileMenuButton = document.querySelector('.md\\:hidden');
             const navLinks = document.querySelector('.hidden.md\\:flex');
             
-            mobileMenuButton.addEventListener('click', function() {
-                navLinks.classList.toggle('hidden');
-                navLinks.classList.toggle('flex');
-                navLinks.classList.toggle('flex-col');
-                navLinks.classList.toggle('absolute');
-                navLinks.classList.toggle('top-16');
-                navLinks.classList.toggle('left-0');
-                navLinks.classList.toggle('right-0');
-                navLinks.classList.toggle('bg-white');
-                navLinks.classList.toggle('p-4');
-                navLinks.classList.toggle('shadow-lg');
-                navLinks.classList.toggle('space-y-4');
-            });
-            
+            if(mobileMenuButton && navLinks) {
+                mobileMenuButton.addEventListener('click', function() {
+                    navLinks.classList.toggle('hidden');
+                    navLinks.classList.toggle('flex');
+                    navLinks.classList.toggle('flex-col');
+                    navLinks.classList.toggle('absolute');
+                    navLinks.classList.toggle('top-16');
+                    navLinks.classList.toggle('left-0');
+                    navLinks.classList.toggle('right-0');
+                    navLinks.classList.toggle('bg-white');
+                    navLinks.classList.toggle('p-4');
+                    navLinks.classList.toggle('shadow-lg');
+                    navLinks.classList.toggle('space-y-4');
+                });
+            }
+        
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if (!navLinks.classList.contains('hidden')) {
-                        navLinks.classList.add('hidden');
-                        navLinks.classList.remove('flex');
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if(target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (navLinks && !navLinks.classList.contains('hidden')) {
+                            navLinks.classList.add('hidden');
+                            navLinks.classList.remove('flex');
+                        }
                     }
                 });
             });
