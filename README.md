@@ -26,15 +26,15 @@
         }
     </style>
 </head>
-<body class="font-sans antialiased text-gray-800">
+<body class="font-sans antialiased text-gray-800 bg-gradient-to-br from-gray-50 to-gray-100">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-4">
                     <i data-feather="home" class="text-blue-600 w-8 h-8"></i>
-                    <span class="font-bold text-xl text-blue-600">Housing Critique</span>
-                </div>
+                        <span class="font-bold text-xl text-blue-600">Housing Critique</span>
+</div>
                 <div class="hidden md:flex space-x-8">
                     <a href="#overview" class="text-gray-700 hover:text-blue-600 transition">Overview</a>
                     <a href="#insights" class="text-gray-700 hover:text-blue-600 transition">Insights</a>
@@ -51,10 +51,9 @@
     <!-- Hero Section with Housing Image -->
     <section class="relative text-white py-20 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700 opacity-90"></div>
-        <img src="http://static.photos/housing/1200x630/42" alt="Housing Development" class="absolute inset-0 w-full h-full object-cover">
-        <div class="relative max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
+<div class="relative max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
             <h1 class="text-4xl md:text-5xl font-bold mb-6">Housing Program Critique Report</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Policy and economic evaluation of Kenya's national housing program</p>
+<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Policy and economic evaluation of Kenya's national housing program</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#overview" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition shadow-md">Explore Report</a>
                 <a href="#recommendations" class="border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition">Key Recommendations</a>
@@ -72,8 +71,7 @@
             
             <!-- Housing Development Image -->
             <div class="mb-12 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up">
-                <img src="http://static.photos/housing/1024x576/23" alt="Kenya Housing Development" class="w-full h-64 object-cover">
-            </div>
+</div>
             
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover transition" data-aos="fade-up" data-aos-delay="100">
@@ -270,8 +268,11 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
-                    <div class="h-16"></div> <!-- Spacer for layout -->
-                </div>
+                    <div class="flex items-center space-x-4">
+                        <i data-feather="home" class="text-white w-8 h-8"></i>
+                        <span class="font-bold text-xl">Housing Program Critique Report</span>
+                    </div>
+</div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
@@ -287,11 +288,15 @@
                         <i data-feather="mail" class="w-5 h-5 mr-3"></i>
                         <span>jamesnderitu947@gmail.com</span>
                     </div>
+                    <div class="flex items-center">
+                        <i data-feather="map-pin" class="w-5 h-5 mr-3"></i>
+                        <span>Nairobi, Kenya</span>
+</div>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>© 2023 Housing Program Critique Report. All rights reserved.</p>
-            </div>
+                        <p>© 2025 Nairobi, Kenya. Housing Program Critique Report. All rights reserved.</p>
+</div>
         </div>
     </footer>
 
